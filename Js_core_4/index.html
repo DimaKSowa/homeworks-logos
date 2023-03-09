@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colorback{
+            background-color: green;
+        }
+
+        .fonts{
+            font-weight:900;
+        }
+
+        .logo{
+            text-align: center;
+        }
+
+        .backsites{
+            background-color: red;
+        }
+    
+        .text_color{
+            color: yellow; /*не розумію, як на силках на сайтах міняти колір */
+        }
+        
+        .div_text{
+            color: yellow;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My page</h1>
+    <p class="sites">мої улюблені сайти: 
+        <a href="http://">google</a>
+        <a href="http://">w3schools</a>
+        <a href="http://">stackoverflow</a>
+    </p>
+    <div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse accusantium quisquam eum maxime ipsam cupiditate doloremque animi provident similique soluta, adipisci iusto iste ipsa sapiente nostrum incidunt itaque. Quasi?</div>
+        <button class="back" onclick="backColor()">Background</button>
+        <button class="font" onclick="fontsPage()">Font</button>
+        <button class="logo" onclick="logoCentre()">h1</button>
+        <button class="back_sites" onclick="backSites()">Background sites</button>
+        <button class="sites_color" onclick="colorSites()">Sites color</button>
+        <button class="div_color" onclick="divText()">Div color</button>
+
+
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
