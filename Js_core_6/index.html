@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .colorBox{
+            margin-top: 200px;
+            margin-left: 300px;
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: absolute;
+            display: none;
+        }
+        .red{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-top: 0px;
+            margin-left: 0px;
+            background-color: red;
+            position: inherit;
+        }
+        .green{
+            position: inherit;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-top: 200px;
+            margin-left: 0px;
+            background-color: green;
+        }
+        .blue{
+            position: inherit;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-top: 0px;
+            margin-left: 200px;
+            background-color: blue;
+        }
+        .yellow{
+            position: inherit;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-top: 200px;
+            margin-left: 200px;
+            background-color: yellow;
+        }
+
+        .imageBox{
+            margin-top: 200px;
+            margin-left: 300px;
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: absolute;
+            display: none;
+        }
+        .img1{
+            height: 200px;
+            width: 200px;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: inherit;
+        }
+        .img2{
+            height: 200px;
+            width: 200px;
+            margin-top: 200px;
+            margin-left: 0px;
+            position: inherit;
+        }
+        .img3{
+            height: 200px;
+            width: 200px;
+            margin-top: 0px;
+            margin-left: 200px;
+            position: inherit;
+        }
+        .img4{
+            height: 200px;
+            width: 200px;
+            margin-top: 200px;
+            margin-left: 200px;
+            position: inherit;
+        } */
+        #textField{
+            width: 700px;
+            height: 300px;
+            margin-top: 100px;
+            margin-left: 200px;
+            background-color: rgb(183, 182, 182);
+            border-radius: 20px;
+            white-space: pre-wrap;
+        }
+        .keyboard{
+            margin-top: 10px;
+            margin-left: 200px;
+            width: 700px;
+            height: 300px;
+        }
+        .btn{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(183, 182, 182);
+            display: inline-flex;
+            margin-left: 2px;
+            margin-top: 5px;
+        }
+        .back{
+            width: 80px;
+            height: 40px;
+            background-color: rgb(183, 182, 182);
+            display: inline-flex;
+            margin-left: 2px;
+        }
+        .space{
+            width: 700px;
+            height: 40px;
+            background-color: rgb(183, 182, 182);
+            display: inline-flex;
+            margin-left: 2px;
+            margin-top: 5px;
+        }
+        .shift{
+            width: 80px;
+            height: 40px;
+            background-color: rgb(183, 182, 182);
+            display: inline-flex;
+            margin-left: 2px;
+            margin-top: 5px;
+        }
+        .enter{
+            width: 90px;
+            height: 40px;
+            background-color: rgb(183, 182, 182);
+            display: inline-flex;
+            margin-left: 2px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="colorTxt">color</div>
+    <div class="imageTxt">image</div>
+
+    <div class="colorBox">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+    </div>
+
+    <div class="imageBox">
+        <div class="img1"><img src="https://i.redd.it/g2jff9yl5mz51.jpg" class="img1"></div>
+        <div class="img2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmDyQ-F6UgjzRcvcWkPVxkzL3zkFpLZVU2eg&usqp=CAU" class="img1"></div>
+        <div class="img3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzJQKfihaFabhk4elnux7gOUL-gnAdm24kMg&usqp=CAU" class="img1"></div>
+        <div class="img4"><img src="https://img3.akspic.ru/crops/0/1/0/7/4/147010/147010-estetika-pastel-rozovyj-kuchevoe_oblako-oblako-1920x1080.jpg" class="img1"></div>
+       
+    </div> -->
+
+    <div id="textField"></div>
+    <div class="keyboard">
+        <div class="a192 btn">`</div>
+        <div class="a1 btn">1</div>
+        <div class="a2 btn">2</div>
+        <div class="a3 btn">3</div>
+        <div class="a4 btn">4</div>
+        <div class="a5 btn">5</div>
+        <div class="a6 btn">6</div>
+        <div class="a7 btn">7</div>
+        <div class="a8 btn">8</div>
+        <div class="a9 btn">9</div>
+        <div class="a0 btn">0</div>
+        <div class="aMin btn">-</div>
+        <div class="aEq btn">=</div>
+        <div class="back">Backspace</div>
+        <br/>
+        <div class="aq btn">Q</div>
+        <div class="aw btn">W</div>
+
+        <br/>
+        <div class="enter">Enter</div>
+        <br/>
+        <div class="shift">Shift</div>
+        <br/>
+        <div class="space">Space</div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
