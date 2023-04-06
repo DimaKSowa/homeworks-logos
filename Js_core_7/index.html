@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .accCreator{
+            width: 300px;
+            height: 450px;
+            border-radius: 5px;
+            border: 1px solid rgb(141, 141, 141);
+            margin-left: 500px;
+            margin-top: 100px;
+            display: block;
+        }
+        .crtAcc{
+            padding-top: 5px;
+            height: 30px;
+            background-color: rgb(1, 181, 100);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        p{
+            margin-top: 10px;
+        }
+        .signForm{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        input{
+            margin-top: 10px;
+            width: 100%;
+        }
+        #male{
+            margin-top: 10px;
+            width:20px;
+        }
+        #female{
+            width:20px;
+        }
+        #privacy{
+            width: 20px;
+        }
+        select{
+            margin-top: 10px;
+            width: 100%;
+        }
+        .signIn{
+            margin-top: 30px;
+            height: 30px;
+            background-color: rgb(1, 181, 100);
+            width: 100%;
+            text-align: center;
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .accShow{
+            width: 300px;
+            height: 320px;
+            border-radius: 5px;
+            border: 1px solid rgb(141, 141, 141);
+            margin-left: 500px;
+            margin-top: 100px;
+            text-align: center;
+            display: none;
+        }
+        .greenHead{
+            padding-top: 5px;
+            height: 90px;
+            background-color: rgb(1, 181, 100);
+            width: 100%;
+            
+        }
+        .avatarBack{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: 10px solid white;
+            margin-left: 100px;
+            margin-top: 40px;
+            background-image: url("./man.png");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .loginAcc{
+            margin-top: 70px;     
+        }
+        .mailAcc{
+            margin-top: 10px;
+        }
+        .signOut{
+            color: rgb(1, 181, 100);
+            background-color: white;
+            width: 130px;
+            height: 40px;
+            border: 2px solid rgb(1, 181, 100);
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="accCreator">
+        <header class="crtAcc">Create your account</header>
+        <form action="" class="signForm">
+            <p>First Name</p>
+            <input type="text" class="frstName">
+            <p>Second Name</p>
+            <input type="text" class="scndName">
+            <p>Email</p>
+            <input type="text" class="mail">
+            <br>
+            <input type="radio" name="gender" id="male" checked>male
+            <input type="radio" name="gender" id="female">female
+            <p>Position</p>
+            <select name="" id="pos">
+                <option value="QUA">QUA</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+            </select>
+            <br>
+            <input type="checkbox" name="privacy" id="privacy">
+            <label for="privacy" class="privacyText">I agree in Terms of service</label>
+            <br>
+            <button class="signIn">Sign in</button>
+        </form>
+    </div>
+
+    <div class="accShow">
+        <header class="greenHead">
+            <div class="avatarBack"></div>
+        </header>
+        <h3 class="loginAcc"></h3>
+        <p class="mailAcc"></p>
+        <p class="positionAcc"></p>
+        <button class="signOut">Sign Out</button>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
