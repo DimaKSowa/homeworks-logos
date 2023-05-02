@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{ 
+            height:90%;
+        }
+        .textField{
+            height: 100%;
+            background: no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            padding-left: 30px;
+        }
+        .editorField{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(121, 121, 121);
+            display: inline-flex;
+            align-items: center;
+
+        }
+        .buttonField{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(121, 121, 121);
+            display: inline-flex;
+            align-items: center;
+            display: none;
+        }
+        .buttonFieldButtons{
+            margin: auto;
+        }
+        .changeText{
+            display: none;
+            width: 99%;
+            height: 100%;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        button{
+            height: 40px;
+            width: 40px;
+            margin: auto;
+        }
+        .textFont{
+            width: 160px;
+            display: inline-flex;
+            margin-right: 50px;
+        }
+        .textAlign{
+            width: 120px;
+            display: inline-flex;
+            margin-right: 50px;
+        }
+        .fieldChange{
+            width: 200px;
+            display: inline-flex;
+        }
+        .fontFamily{
+            width: 50px;
+        }
+        .fontSize{
+            width: 50px;
+        }
+        .textColor{
+            width: 50px;
+        }
+        .backColor{
+            width: 50px;
+        }
+        .editorOpen{
+            margin-right: 50px;
+        }
+        .lockLogin{
+            margin-left: 50px;
+        }
+        select{
+            height: 40px;
+            width: 50px;
+            margin: auto;
+        }
+        .colorTextField{
+            position: absolute;
+            width: 440px;
+            height: 265px;
+            margin-top: 100px;
+            margin-left: 525px;
+            background-color: rgb(228, 228, 228);
+            border-radius: 10px;
+            display: none;
+        }
+        .listDotCreator{
+            position: absolute;
+            width: 440px;
+            height: 265px;
+            margin-top: 100px;
+            margin-left: 525px;
+            background-color: rgb(228, 228, 228);
+            border-radius: 10px;
+            display: none;
+        }
+        .list123Creator{
+            position: absolute;
+            width: 440px;
+            height: 265px;
+            margin-top: 100px;
+            margin-left: 525px;
+            background-color: rgb(228, 228, 228);
+            border-radius: 10px;
+            display: none;
+        }
+        .colorBackField{
+            position: absolute;
+            width: 440px;
+            height: 285px;
+            margin-top: 100px;
+            margin-left: 525px;
+            background-color: rgb(228, 228, 228);
+            border-radius: 10px;
+            display: none;
+        }
+        .createTable{
+            position: absolute;
+            width: 440px;
+            height: 265px;
+            margin-top: 100px;
+            margin-left: 525px;
+            background-color: rgb(228, 228, 228);
+            border-radius: 10px;
+            display: none;
+        }
+        .tablesInput{
+            display: inline-flex;
+            width: 205px;
+            height: 25px;
+            margin-left: 5px;
+        }
+        .tablesChoose{
+            display: inline-flex;
+            width: 100px;
+            height: 25px;
+            margin-left: 5px;
+        }
+        .resetTable{
+            background-color: red;
+            width: 210px;
+            height: 40px;
+            margin-left: 5px;
+            margin-top: 10px;
+            border: 0;
+            border-radius: 1px;
+        }
+        .saveTable{
+            background-color: green;
+            width: 210px;
+            height: 40px;
+            margin-left: 5px;
+            margin-top: 10px;
+            border: 0;
+            border-radius: 1px;
+        }
+        .btnColor{
+            width: 100px;
+            height: 100px;
+            display: inline-flex;
+            margin-left: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .btnImg{
+            width: 130px;
+            height: 100px;
+            display: inline-flex;
+            margin-left: 5px;
+            margin-top: 5px;
+            border-radius: 5px; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            cursor: pointer;
+            display: none;
+        }
+        .img1{
+            background-image: url('./img1.jpg');
+        }
+        .img2{
+            background-image: url('./img2.jpg');
+        }
+        .img3{
+            background-image: url('./img3.jpg');
+        }
+        .img4{
+            background-image: url('./img4.jpg');
+        }
+        .img5{
+            background-image: url('./img5.jpg');
+        }
+        .img6{
+            background-image: url('./img6.jpg');
+        }
+        .chooseText{
+            display: inline-flex;
+            margin-left: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .closeColor{
+            float: right;
+            border: 0;
+            margin-right: 20px;
+            background-color: rgb(228, 228, 228);
+        }
+        .closeBack{
+            float: right;
+            border: 0;
+            margin-right: 20px;
+            background-color: rgb(228, 228, 228);
+        }
+        .closeTable{
+            float: right;
+            border: 0;
+            margin-right: 20px;
+            background-color: rgb(228, 228, 228);
+        }
+        .closeLiDot{
+            float: right;
+            border: 0;
+            margin-right: 20px;
+            background-color: rgb(228, 228, 228);
+        }
+        .closeLi123{
+            float: right;
+            border: 0;
+            margin-right: 20px;
+            background-color: rgb(228, 228, 228);
+        }
+        hr{
+            width: 440px;
+            background-color: rgb(138, 138, 138);
+            height: 2px;
+            border: 0;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color:green;
+        }
+        .black{
+            background-color: black;
+        }
+        .white{
+            background-color: white;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .grey{
+            background-color: grey;
+        }
+        .brown{
+            background-color: brown;
+        }
+        .colorsBack{
+            color: rgb(0, 83, 166);
+            width: 60px;
+            height: 20px;
+            display: inline-flex;
+            border: 2px solid rgb(138, 138, 138);
+            margin-left: 10px;
+            padding-left: 10px;
+            background-color: rgb(228, 228, 228);
+            border-bottom: 2px solid rgb(228, 228, 228);
+            outline: 5px solid rgb(228, 228, 228);
+        }
+        .imagesBack{
+            color: rgb(0, 83, 166);
+            width: 60px;
+            height: 20px;
+            display: inline-flex;
+            border: 2px solid rgb(138, 138, 138);
+            padding-left: 7px;
+            background-color: rgb(228, 228, 228);
+        }
+        .filesBack {
+            color: rgb(0, 83, 166);
+            width: 60px;
+            height: 20px;
+            display: inline-flex;
+            border: 2px solid rgb(138, 138, 138);
+            padding-left: 15px;
+            background-color: rgb(228, 228, 228);
+        }    
+        textarea {
+          resize: none;
+        }
+        table{
+            border: 1px solid red;
+        }
+        .listDotText{
+            width: 95%;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .btnResetDot{
+            width: 210px;
+            margin-left: 5px;
+            margin-top: 20px;
+            background-color: red;
+            border: 0;
+            border-radius: 5px;
+        }
+        .btnSaveDot{
+            width: 210px;
+            margin-left: 5px;
+            margin-top: 20px;
+            background-color: green;
+            border: 0;
+            border-radius: 5px;
+        }
+        .btnReset123{
+            width: 210px;
+            margin-left: 5px;
+            margin-top: 20px;
+            background-color: red;
+            border: 0;
+            border-radius: 5px;
+        }
+        .btnSave123{
+            width: 210px;
+            margin-left: 5px;
+            margin-top: 20px;
+            background-color: green;
+            border: 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="colorTextField">
+        <p class="chooseText">Choose text color</p>
+        <button class="closeColor">C</button>
+        <hr>
+
+        <div class="btnColor red redText"></div>
+        <div class="btnColor green greenText"></div>
+        <div class="btnColor black blackText"></div>
+        <div class="btnColor white whiteText"></div>
+        <div class="btnColor blue blueText"></div>
+        <div class="btnColor yellow yellowText"></div>
+        <div class="btnColor grey greyText"></div>
+        <div class="btnColor brown brownText"></div>
+
+    </div>
+    <div class="colorBackField">
+        <p class="chooseText">Choose back color</p>
+        <button class="closeBack">C</button>
+        <br>
+        <button class="colorsBack">Colors</button>
+        <button class="imagesBack">Images</button>
+        <button class="filesBack">Files</button>
+        <hr>
+
+
+        <div class="btnColor red redBack"></div>
+        <div class="btnColor green greenBack"></div>
+        <div class="btnColor black blackBack"></div>
+        <div class="btnColor white whiteBack"></div>
+        <div class="btnColor blue blueBack"></div>
+        <div class="btnColor yellow yellowBack"></div>
+        <div class="btnColor grey greyBack"></div>
+        <div class="btnColor brown brownBack"></div>
+
+                
+        <div class="btnImg img1"></div>
+        <div class="btnImg img2"></div>
+        <div class="btnImg img3"></div>
+        <div class="btnImg img4"></div>
+        <div class="btnImg img5"></div>
+        <div class="btnImg img6"></div>
+
+    </div>
+
+    <div class="createTable">
+        <p class="chooseText">Choose text color</p>
+        <button class="closeTable">C</button>
+        <hr>
+
+        <form action="">
+            <p class="tablesInput">Count TR</p>
+            <p class="tablesInput">Count TD</p>
+            <input class="tablesInput trCount" type="number" min="1" max="10">
+            <input class="tablesInput tdCount" type="number" min="1" max="10">
+            <p class="tablesInput">Width of TD</p>
+            <p class="tablesInput">Height of TD</p>
+            <input class="tablesInput tdWidth" type="number" min="1" max="100">
+            <input class="tablesInput tdHeight" type="number" min="1" max="100">
+            <p class="tablesInput">Border width</p>
+            <p class="tablesChoose">Style of border</p>
+            <p class="tablesChoose">Color of border</p>
+            <input class="tablesInput tdBorder" type="number" min="1" max="10">
+            <select class="tablesChoose tdBorderStyle" name="" id="">
+                <option value="solid">solid</option>
+                <option value="dotted">dotted</option>
+                <option value="dashed">dashed</option>
+            </select>
+            <select class="tablesChoose tdBorderColor" name="" id="">
+                <option value="red">red</option>
+                <option value="white">white</option>
+                <option value="green">green</option>
+                <option value="black">black</option>
+                <option value="blue">blue</option>
+            </select>
+        </form>
+        <button class="resetTable">Reset</button>
+        <button class="saveTable">Save</button>
+    </div>
+
+    <div class="listDotCreator">
+        <p class="chooseText">Create Ul</p>
+        <button class="closeLiDot">C</button>
+        <hr>
+
+        <form action="">
+            <p class="listDotText">Count li items</p>
+            <input class="listDotText liDotNumber" type="number" min="1" max="10">
+            <p class="listDotText">Type mark of list</p>
+            <select class="listDotText listDotStyle" name="" id="">
+                <option value="circle">Circle</option>
+                <option value="square">Square</option>
+                <option value="disc">Disc</option>
+            </select>
+        </form>
+        <button class="btnResetDot">Reset</button>
+        <button class="btnSaveDot">Save</button>
+    </div>
+
+    <div class="list123Creator">
+        <p class="chooseText">Create Ul</p>
+        <button class="closeLi123">C</button>
+        <hr>
+
+        <form action="">
+            <p class="listDotText">Count li items</p>
+            <input class="listDotText li123Number" type="number" min="1" max="10">
+            <p class="listDotText">Type mark of list</p>
+            <select class="listDotText list123Style" name="" id="">
+                <option value="roman">|</option>
+                <option value="number">1</option>
+            </select>
+        </form>
+        <button class="btnReset123">Reset</button>
+        <button class="btnSave123">Save</button>
+    </div>
+
+
+
+    <div class="editorField">
+        <button class="editorOpen">&lt/&gt</button>
+        <div class="textFont">
+            <button class="b">B</button>
+            <button class="i">I</button>
+            <button class="u">U</button>
+            <button class="s">S</button>
+        </div>
+        <div class="textAlign">
+            <button class="leftAlign">\</button>
+            <button class="middleAlign">|</button>
+            <button class="rightAlign">/</button>
+        </div>
+        <div class="fieldChange">
+            <select name="" id="textFontFamily">
+                <option value="default">A</option>
+                <option value="default">A</option>
+                <option value="default">Aaaaaaaaaaa</option>
+  
+            </select>
+            <select  name="" id="textFontSize">
+                <option value="">T</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+            </select>
+            <button class="textColor">Clr</button>
+            <button class="backColor">img</button>
+
+        </div>
+        <button class="lockLogin">lock</button>
+        
+        
+    </div>
+    <div class="buttonField">
+        <div class="buttonFieldButtons">
+            <button class="save">S</button>
+            <button class="tables">T</button>
+            <button class="list123">L1</button>
+            <button class="listDot">L•</button>
+        </div>
+    </div>
+    <textarea type="text" rows="10" cols="30" class="changeText"></textarea>
+
+    <div class="textField">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
