@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .textField{
+            width: 1000px;
+            height: 300px;
+            background-color: rgb(211, 211, 211);
+            margin-left: 200px;
+            margin-top: 30px;
+            border:2px solid rgb(178, 178, 178);
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-top: 10px;
+            font-size: 12px;
+            font-weight: 400;
+
+        }
+        .editorField{
+            width: 1000px;
+            height: 300px;
+            background-color: rgb(211, 211, 211);
+            margin-left: 200px;
+            margin-top: 30px;
+            border:2px solid rgb(178, 178, 178);
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .styleField{
+            display: none;
+        }
+        .editBtn{
+            margin-top: 20px;
+            margin-left: 600px;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(255, 187, 41);
+            border: 0px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .styleBtn{
+            margin-left: 20px;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(0, 179, 255);
+            border: 0px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .editInput{
+            width: 900px;
+            height: 200px;
+            margin-top: 5px;
+            display: none;
+            white-space: pre-wrap;
+        }
+        .addBtn{
+            margin-top: 20px;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(255, 44, 44);
+            border: 0px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+        .saveBtn{
+            margin-left: 10px;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(26, 255, 0);
+            border: 0px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+        .colorText{
+            width: 200px;
+            height: 200px;
+            margin-left: 400px;
+            margin-top: 40px;
+            position: absolute;
+            display: none;
+        }
+        .colorBack{
+            width: 200px;
+            height: 200px;
+            margin-left: 400px;
+            margin-top: 40px;
+            position: absolute;
+            display: none;
+        }
+        .colorOption{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            display: inline-flex;
+        }
+        .redText{
+            background-color: red;
+
+        }
+        .blackText{
+            background-color: black;
+            margin-left: 100px;
+        }
+        .greenText{
+            background-color: green;
+            margin-top: 100px;
+        }
+        .blueText{
+            background-color: blue;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        .redBack{
+            background-color: red;
+
+        }
+        .greyBack{
+            background-color: rgb(168, 168, 168);
+            margin-left: 100px;
+        }
+        .greenBack{
+            background-color: green;
+            margin-top: 100px;
+        }
+        .blueBack{
+            background-color: blue;
+            margin-left: 100px;
+            margin-top: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="textField">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button class="editBtn">edit</button>
+    <button class="styleBtn">style</button>
+    <form class="editorField" name="first">
+        <div class="colorText">
+            <div class="colorOption redText"></div>
+            <div class="colorOption blackText"></div>
+            <div class="colorOption greenText"></div>
+            <div class="colorOption blueText"></div>
+        </div>
+        <div class="colorBack">
+            <div class="colorOption redBack"></div>
+            <div class="colorOption greyBack"></div>
+            <div class="colorOption greenBack"></div>
+            <div class="colorOption blueBack"></div>
+        </div>
+        <input type="text" class="editInput">
+        <br/>
+        <button class="addBtn">add</button>
+        <button class="saveBtn">save</button>
+    
+
+        <div class="styleField">
+            <label for="">Font size</label>
+            <br>    
+            <input type="radio" name="fontSize" class="a12px" value="12px">12px
+            <input type="radio" name="fontSize" class="a14px" value="14px">14px
+            <input type="radio" name="fontSize" class="a16px" value="16px">16px
+            <input type="radio" name="fontSize" class="a18px" value="18px">18px
+            <input type="radio" name="fontSize" class="a20px" value="20px">20px
+            <p>Font family:</p>
+            <select onchange="selectTextFonts(this)" name="" id="selectFont">
+                <option selected value="default">Choose option</option>
+                <option value="cursive">sans-serif</option>
+                <option value="monospace">fantasy</option>
+            </select>
+            <br>
+            <button class="colorTextBtn">Color of Text</button>
+            <button class="colorBackBtn">Background color</button>
+            <br/>
+            <label for="">Style:</label>
+            <br/>
+            <input type="checkbox" id="boldFont">
+            <label for="boldFont">Bold</label>
+            <input type="checkbox" id="cursiveFont">
+            <label for="cursiveFont">Cursive</label>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
